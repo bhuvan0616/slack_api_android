@@ -1,0 +1,2 @@
+include ':app', ':slackapi'
+rootProject.name='Slack API'
