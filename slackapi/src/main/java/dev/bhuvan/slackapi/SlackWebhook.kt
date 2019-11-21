@@ -1,5 +1,6 @@
 package dev.bhuvan.slackapi
 
+import android.util.Log
 import com.google.gson.Gson
 import dev.bhuvan.slackapi.model.Config
 import dev.bhuvan.slackapi.model.SlackMessage
@@ -14,7 +15,11 @@ class SlackWebhook private constructor(private val config: Config) {
 
     fun post(slackMessage: SlackMessage) {
         GlobalScope.launch(Dispatchers.IO) {
-            config.client.newCall(createRequest(slackMessage)).execute()
+            try {
+                config.client.newCall(createRequest(slackMessage)).execute()
+            } catch (e: Exception) {
+                Log.e("Exception", e.toString())
+            }
         }
     }
 
