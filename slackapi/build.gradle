@@ -17,7 +17,7 @@ ext {
     siteUrl = 'https://github.com/bhuvan0616/slack_api_android'
     gitUrl = 'https://github.com/bhuvan0616/slack_api_android.git'
 
-    libraryVersion = '1.0'
+    libraryVersion = '1.1'
 
     developerId = 'bhuvan0616'
     developerName = 'Bhuvanesh BS'
